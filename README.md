@@ -4,7 +4,7 @@
 This repository contains a collection of frontend projects created using HTML, CSS, and basic JavaScript. All the code was generated through efficient prompting of ChatGPT, with a focus on building user interfaces. These projects do not include any backend functionality.
 
 ## Table of Contents
-1. [ChatGPT Interface](#https://github.com/vara-github1/Front-end-AI/tree/main/ChatApp2%20Interface)
+1. [ChatGPT Interface](#ChatGPT-interface)
 2. [ChatApp Interface](#chatapp-interface)
 3. [HairDaySalon](#hairdaysalon)
 4. [COVID-Tracker](#covid-tracker)
