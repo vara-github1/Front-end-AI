@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COVID-19 Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>COVID-19 Tracker</h1>
+    </header>
+    <main>
+        <section class="tracker">
+            <h2>Global Data</h2>
+            <div class="data">
+                <div class="info">
+                    <h3>Total Cases</h3>
+                    <p id="total-cases">Loading...</p>
+                </div>
+                <div class="info">
+                    <h3>Total Deaths</h3>
+                    <p id="total-deaths">Loading...</p>
+                </div>
+                <div class="info">
+                    <h3>Total Recoveries</h3>
+                    <p id="total-recoveries">Loading...</p>
+                </div>
+                <!-- <div class="chart-container">
+                    <canvas id="chart"></canvas>
+                </div> -->
+            </div>
+        </section>
+        <section class="options">
+            <h2>Options</h2>
+            <label for="region-select">Select Region:</label>
+            <select id="region-select">
+                <option value="all">Global</option>
+            </select>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 COVID-19 Tracker</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

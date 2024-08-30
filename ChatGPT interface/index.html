@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="path/to/your/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha384-rkNgnRpPkpLzi1Tkz3aWP1nZ6i9AbN9PExdYK25jrJ0b9nuy9qixiDz+S0wlrF/x" crossorigin="anonymous">
+    <title>Chat App</title>
+</head>
+<body>
+    <div class="app-container">
+        <button class="show-sidebar-button" id="show-sidebar-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="left-pane" id="left-pane">
+            <div class="top-header">
+                <button class="new-chat-button" id="new-chat-button"><i class="fas fa-comment"></i> New Chat</button>
+                <button class="close-sidebar-button" id="close-sidebar-button"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="list-of-chats" id="chat-list">
+                <!-- Existing chat items -->
+                <div class="single-chat">
+                    <i class="fas fa-comment chat-icon"></i>
+                    <span class="chat-title">Chat Title</span>
+                </div>
+                <!-- Add more chat items here -->
+            </div>
+            <div class="profile">
+                <div class="upgrade-plan">
+                    <i class="fas fa-plus-square account-icon"></i>
+                    <span>|  Upgrade to Plus</span>
+                    <span class="new-label">New</span>
+                </div>
+                <div class="profile-details">
+                    <img src="https://1.bp.blogspot.com/-h5Ryn7Z5h6w/XWVTaOKUTGI/AAAAAAAAIhY/2uinqloU6D0rM8eJ-YwlbLokW2BA2zGZwCLcBGAs/s1600/iron%2Bman%2Bwallpaper%2B4k%2B%252813%2529.jpg" alt="User Avatar" class="user-avatar">
+                    <span class="user-name">User Name</span>
+                    <button class="more-options-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="right-pane" id="right-pane">
+            <div class="floating-buttons">
+                <button class="floating-button">GPT-3.5</button>
+                <button class="floating-button">GPT-4</button>
+            </div>
+            <div class="middle-section">
+                <h1 class="name">Chat With Me</h1> <!-- Large font name -->
+                <div class="messages-section" id="messages-section">
+                    <!-- Messages content here -->
+                </div>
+                <div class="send-message-section">
+                    <input type="text" class="input-box" placeholder="Type your message...">
+                    <button class="send-icon"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>

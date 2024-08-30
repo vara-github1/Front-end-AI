@@ -1,0 +1,519 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+}
+
+.app-container {
+    display: flex;
+}
+
+.left-pane {
+    width: 25%;
+    background-color: #282828; /* Dark sidebar color */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-header {
+    background-color: #333; /* Dark header color */
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.new-chat-button {
+    background-color: #00a2ff; /* Blue button color */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    margin-right: 10px;
+}
+
+/* .close-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.list-of-chats {
+    background-color: #282828; /* Dark list background color */
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.single-chat {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-icon {
+    color: #00a2ff; /* Blue chat icon color */
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.chat-title {
+    flex-grow: 1;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.upgrade-plan {
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: 10px;
+    display: block; /* Displayed as a block (stacked vertically) */
+    margin-bottom: 10px;
+}
+
+.upgrade-logo {
+    width: 32px; /* Adjust the size of the logo */
+    height: 32px;
+    margin-right: 10px;
+}
+
+.new-label {
+    background-color: #ff5e3a; /* Red new label background color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-left: auto; /* Stuck to the right edge */
+}
+
+.profile-details {
+    /* display: flex; */
+    align-items: center;
+    display: block;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    flex-grow: 1;
+}
+
+.more-options-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: auto; /* Stuck to the right edge */
+}
+
+
+
+.close-sidebar-button {
+    background-color: white;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20%; /* Set the width to 20% */
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    padding-right: 10px; /* Add some right padding for spacing */
+}
+
+/* ... (your existing CSS) ... */
+
+/* .top-header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Adjusted for button alignment */
+    /* align-items: center;
+}
+
+.new-chat-button {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    /* margin-right: 10px; Remove this margin */
+/* } */
+
+/* .close-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20%; /* Set the width to 20% */
+    /* text-align: right; Align the text to the right */
+/* } */
+
+/* ... (your existing CSS) ... */
+
+.top-header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-chat-button {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    text-align:center; /* Adjust the text alignment to the left */
+}
+
+.close-sidebar-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    width: 20%;
+   /* Adjust the text alignment to the right */
+}
+
+/* ... (your existing CSS) ... */
+
+
+/* ... (your existing CSS) ... */
+
+/* .show-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20%;
+    text-align: right;
+    display: none; /* Initially hidden */
+    /* margin-right: 10px; */
+/* } */ 
+
+.left-pane {
+    position: relative;
+}
+
+.profile {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ... (your existing CSS) ... */
+
+/* .show-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20%;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+} */
+
+.left-pane {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    flex: 1; /* Expands to fill the available vertical space */
+    display: flex;
+    flex-direction: column;
+}
+
+.upgrade-plan {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ... (your existing CSS) ... */
+
+.show-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    /* width: 20%; */
+    text-align: right;
+    position: absolute;
+    top: 10px; /* Adjust the top position for spacing */
+    left: 10px; /* Adjust the left position for spacing */
+    z-index: 999; /* Ensure it's on top of other elements */
+}
+
+
+/* ... (your existing CSS) ... */
+
+.left-pane {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.upgrade-plan {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: row; /* Set the direction to row */
+    align-items: center;
+    justify-content: space-between; /* Align items to the left and right */
+    padding: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    flex-grow: 1;
+    text-align: left; /* Ensure user name is on the left */
+}
+
+.more-options-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20px; /* Adjust the width as needed */
+    text-align: right; /* Align to the right */
+}
+
+/* Add this CSS for the right pane */
+.right-pane {
+    width: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: 0.3s;
+    background-color: #333;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%; /* 75% screen width */
+    color: #fff;
+}
+
+.floating-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.floating-button {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+.messages-section {
+    flex: 1;
+    background-color: #1f1f1f;
+    overflow-y: auto;
+}
+
+.send-message-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input-box {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    resize: vertical; /* Allow multi-line input */
+}
+
+.send-icon {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* ... (your existing CSS) ... */
+
+.show-sidebar-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    width: 20px;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.left-pane {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.upgrade-plan {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.right-pane {
+    width: 75%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-buttons {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.floating-button {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.middle-section {
+    text-align: center; /* Center align the content */
+    flex: 1; /* Expands to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align vertically */
+}
+
+.name {
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #fff;
+    margin: 20px 0; /* Adjust spacing as needed */
+}
+
+.messages-section {
+    background-color: #333;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.send-message-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.input-box {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.send-icon {
+    background-color: #00a2ff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* ... (your existing CSS) ... */
+
+.middle-section {
+    text-align: center; /* Center align the content horizontally */
+    flex: 1; /* Expands to fill available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align vertically */
+    align-items: center; /* Center align horizontally */
+}
+
+.name {
+    font-size: 36px; /* Adjust the font size as needed */
+    color: #fff;
+    margin: 20px 0; /* Adjust spacing as needed */
+}

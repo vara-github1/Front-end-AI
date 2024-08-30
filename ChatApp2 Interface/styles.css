@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-pane {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease; /* Added transition for smooth animation */
+}
+
+.left-pane.hidden {
+    width: 0;
+}
+
+.right-pane {
+    flex-grow: 1;
+    position: relative;
+    background-color: rgb(52, 53, 65); /* Updated right pane background color */
+}
+
+/* Updated CSS *//* Updated CSS for .toggle-icon */
+.toggle-icon {
+    width: 3px;
+    height: 20px; /* Vertical line */
+    background-color: #ffffff; /* White color */
+    margin-left: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 2px; /* Adjusted the left margin to 5px */
+    transform: translateY(-50%);
+}
+
+
+
+.top-header {
+    padding: 10px;
+}
+
+.new-chat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+/* Add padding to the profile-section and upgrade-plan sections */
+.profile-section {
+    margin-top: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 15px; /* Add padding here */
+}
+
+.upgrade-plan,
+.profile-details {
+    display: flex;
+    align-items: center;
+    padding: 15px; /* Add padding here */
+}
+
+
+.new-chat-logo {
+    margin-left: auto;
+}
+
+.list-of-chats {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.single-chat {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.chat-icon {
+    margin-right: 10px;
+}
+
+.profile-section {
+    margin-top: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.upgrade-plan,
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.upgrade-plan i,
+.profile-details i {
+    margin-right: 10px;
+}
+
+.new-label {
+    margin-left: auto;
+    color: #e74c3c;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* Add this to your existing CSS */
+.new-chat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.new-chat .chat-icon {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.new-chat-logo {
+    margin-left: auto;
+}
+
+/* Add this to your existing CSS */
+.new-chat:hover,
+.list-of-chats .single-chat:hover,
+.upgrade-plan:hover,
+.profile-section:hover {
+    background-color: rgb(31, 33, 35);
+    cursor: pointer;
+}
+.right-pane h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    margin: 0;
+    padding: 7px;
+    border-radius: 10%;
+}
+.right-pane h2:hover {
+    background-color: rgb(46, 48, 59); /* Change the color on hover */
+}
+/* Add this to your existing CSS */
+.right-pane .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+}
+
+.right-pane .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.right-pane .help-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #ffffff;
+    font-size: 1rem; /* Adjust the font size as needed */
+    text-align: center;
+}
+/* Add this to your existing CSS */
+.right-pane .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Ensure the image stays within the circular shape */
+}
+
+.right-pane .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preserve the aspect ratio */
+    border-radius: 50%; /* Match the outer container's border-radius */
+}
+/* Add this to your existing CSS */
+.right-pane .help-text {
+    position: absolute;
+    top: 63%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.5rem; /* Match the font size with h2 element */
+    text-align: center;
+}
+/* Add this to your existing CSS */
+.right-pane .message-box-container {
+    position: absolute;
+    bottom: 10%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.right-pane .message-box {
+    flex-grow: 1;
+    border: none;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.right-pane .send-icon {
+    cursor: pointer;
+}
+
+/* Add this to your existing CSS */
+.right-pane .message-box-container {
+    position: absolute;
+    bottom: 10%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    background-color: rgba(52, 53, 65, 0.1); /* Transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid rgb(152, 152, 173); /* Thin border */ 
+}
+
+.right-pane .message-box {
+    flex-grow: 1;
+    border: none;
+    padding: 8px;
+    margin-right: 8px;
+    background: transparent; /* Transparent background */
+    color: #ffffff; /* Text color */
+}
+
+.right-pane .send-icon {
+    cursor: pointer;
+    color: #ffffff; /* Icon color */
+}
+
+/* Add this to your existing CSS */
+.right-pane .extra-boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    position: absolute;
+    bottom: 20%; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right-pane .extra-box {
+    flex-grow: 1;
+    background-color: rgba(52, 53, 65, 0.1); /* Transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(152, 152, 173); /* Thin border */
+    margin-right: 10px;
+}
+
+.right-pane .extra-box input {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    background: transparent; /* Transparent background */
+    color: #ffffff; /* Text color */
+}
+.conversation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sent-message {
+    background-color: #e6e6e6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+/* Add padding to the profile-section and upgrade-plan sections */
+.profile-section {
+    margin-top: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 15px; /* Add padding here */
+}
+
+.upgrade-plan,
+.profile-details {
+    display: flex;
+    align-items: center;
+    padding: 15px; /* Add padding here */
+}
+
+/* Add hover effect to the right-pane extra boxes */
+.right-pane .extra-box:hover {
+    background-color: rgb(64, 65, 79);
+    cursor: pointer;
+}
+
+.fa-pencil {
+    padding-right: 10px;
+}

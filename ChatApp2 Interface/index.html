@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome CSS (you might need to download it or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="left-pane" id="leftPane">
+        <div class="top-header">
+            <div class="new-chat" id="newChatButton" onclick="addNewChat()">
+                
+                <img src="https://logosandtypes.com/wp-content/uploads/2022/07/OpenAI.png" alt="User Avatar" class="user-avatar">
+                <span>New Chat</span>
+                <i class="fa fa-pencil"></i>
+
+            </div>
+        </div>
+        <div class="list-of-chats" id="chatList">
+            <!-- Existing chat items go here -->
+        </div>
+        <div class="profile-section">
+            <div class="upgrade-plan">
+                <i class="fa fa-arrow-up"></i>
+                <span>Upgrade to Plus</span>
+                <span class="new-label">new</span>
+            </div>
+            <div class="profile-details">
+                <img src="https://images.nightcafe.studio/jobs/xEbVPHO1SqR3NU2r7rHZ/xEbVPHO1SqR3NU2r7rHZ--3--8mqdq.jpg?tr=w-1600" alt="User Avatar" class="user-avatar">
+                <span class="user-name">John Doe</span>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+    </div>
+    <div class="right-pane">
+      <h2>ChatGPT 3.5</h2>
+
+       <div class="toggle-icon" id="toggleButton"></div>
+        <div class="logo">
+        <img src="https://logosandtypes.com/wp-content/uploads/2022/07/OpenAI.png" alt="Logo">
+    </div>
+          <div class="help-text">
+        How can I help you today?
+    </div>
+<!-- Add this to your existing HTML, inside the right-pane div -->
+<div class="extra-boxes">
+    <div class="extra-box">
+        <p>Design a Database Schema</p>
+    </div>
+    <div class="extra-box">
+<p>Come up with a concept</p>
+    </div>
+</div>
+
+
+<!-- Add this to your existing HTML, inside the right-pane div -->
+<div class="message-box-container">
+    <input type="text" class="message-box" placeholder="Message ChatGPT...">
+    <i class="fas fa-paper-plane send-icon"></i>
+</div>
+
+    </div>
+    <!-- Add this to your existing HTML, inside the right-pane div -->
+
+
+</div>
+
+<script>
+const toggleButton = document.getElementById('toggleButton');
+const leftPane = document.getElementById('leftPane');
+const chatList = document.getElementById('chatList');
+const sendIcon = document.querySelector('.send-icon');
+const rightPane = document.querySelector('.right-pane');
+
+toggleButton.addEventListener('click', () => {
+    leftPane.classList.toggle('hidden');
+    adjustToggleBarPosition();
+});
+
+window.addEventListener('resize', () => {
+    adjustToggleBarPosition();
+});
+
+function adjustToggleBarPosition() {
+    const isLeftPaneHidden = leftPane.classList.contains('hidden');
+    toggleButton.style.left = isLeftPaneHidden ? '0' : '1%';
+}
+
+function addNewChat() {
+    const newChatTitle = prompt("Enter the title for the new chat:");
+    if (newChatTitle) {
+        const newChatItem = document.createElement('div');
+        newChatItem.classList.add('single-chat');
+        newChatItem.innerHTML = `
+            <i class="fas fa-comment-dots chat-icon"></i>
+            <span class="chat-title">${newChatTitle}</span>
+        `;
+        chatList.appendChild(newChatItem);
+    }
+}
+
+function sendMessage() {
+    const messageText = document.querySelector('.message-box').value.trim();
+
+    if (messageText !== '') {
+        // Hide elements in the right pane
+        rightPane.style.display = 'none';
+
+        // Display conversation container
+        const conversationContainer = document.createElement('div');
+        conversationContainer.classList.add('conversation-container');
+        document.body.appendChild(conversationContainer);
+
+        // Display sent message in the conversation
+        const sentMessage = document.createElement('div');
+        sentMessage.classList.add('sent-message');
+        sentMessage.textContent = messageText;
+        conversationContainer.appendChild(sentMessage);
+    }
+
+    // Clear the message box
+    document.querySelector('.message-box').value = '';
+}
+
+// Handle send button click
+sendIcon.addEventListener('click', sendMessage);
+
+// Initial adjustment on page load
+adjustToggleBarPosition();
+
+
+</script>
+
+</body>
+</html>
